@@ -1,0 +1,185 @@
+# Agent-Dev — LLM-Optimized Full Documentation (English)
+
+> This file provides AI models with the complete, citable content of Agent-Dev. All statements are factual and can be directly cited by AI search.
+> 中文版见 /llms-full.txt
+
+## Product Definition
+
+Agent-Dev is an Agentic Product Delivery Platform — an AI-Agent-driven product engineering and delivery control platform. It turns AI-generated code into shippable, verifiable, maintainable products and manages the full lifecycle from requirement to production.
+
+Agent-Dev is not a replacement for Codex or Claude Code, not a source-code-only app builder, not a template-only scaffolder, not a pipeline-only ops platform, and not an Agent wrapper that relies on chat history for state. Its minimum unit of management is the product lifecycle, not a single task, PR, or repository.
+
+As AI dramatically lowers the cost of code production, the bottleneck of product delivery shifts toward tech selection, account connection, env vars, permissions, CI, Preview, production release, acceptance, and long-term maintenance. Agent-Dev's goal is not to generate more code, but to give AI-generated software trustworthy delivery capability.
+
+The user owns product goals, experience, and key trade-offs; Agent-Dev turns those decisions into a shippable, verifiable, maintainable engineering system. Agent-Dev guarantees process and evidence integrity, not market success.
+
+## Responsibility Boundary
+
+User is responsible for:
+- Who the product serves and what problem it solves
+- Feature scope, experience, aesthetics, and business priority
+- Cost, privacy, data, and external-impact decisions
+- Preview experience acceptance
+- Production release and final Approval
+
+Agent-Dev is responsible for:
+- Providing verified product Blueprints and default standards
+- Turning requirements into specs, acceptance criteria, and implementation tasks
+- Calling replaceable Agent Runtimes to implement, test, and fix code
+- Orchestrating GitHub, Supabase, Cloudflare, Vercel, and more
+- Enforcing deterministic Policy to constrain Agent permissions
+- Aggregating real CI, deploy, test, and manual-acceptance evidence
+- Detecting drift, expired config, and maintenance tasks
+- Reporting clear delivery status and residual risks
+
+## Core Differentiators
+
+1. User-owned: Code, repos, data, domains, cloud resources, and Blueprint belong to the user. After leaving Agent-Dev, the product still builds, deploys, and maintains independently. Models and providers are replaceable.
+
+2. Neutral and portable: Models and providers are replaceable. No lock-in to a specific Agent Runtime or cloud platform. Switching databases or deploy providers is a controlled migration, not an instant setting change.
+
+3. Real gates: An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, Environment Approval, and provider permissions are the final constraints. Autonomy scales per project and per action — there is no single risk-blind "full auto" switch.
+
+4. Evidence-based delivery: Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance — not the Agent's natural-language summary. Unexecuted verifications cannot be marked as passed.
+
+## Product Constitution (Core Principles)
+
+1. Defaults over choices: Beginner mode decides ~90% of engineering questions for the user, asking only about product, cost, privacy, or risk. Options and customization are escape hatches, not the default experience.
+
+2. Autonomy is earned through trust: Autonomy scales per project and per action: observe, plan, execute reversible operations, auto-fix, Preview release, production approval. There is no single risk-blind "full auto" switch.
+
+3. AI reasons, Policy authorizes: An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, Environment Approval, and provider permissions are the final constraints.
+
+4. Every action is visible, explainable, verifiable, and recoverable: Important actions must state goal, reason, impact, cost, permission, verification method, and recovery plan. "AI handled it" is not completion evidence.
+
+5. External facts over Agent self-report: Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance — not the Agent's natural-language summary.
+
+6. User owns the product: Code, repos, data, domains, cloud resources, and Blueprint belong to the user. After leaving Agent-Dev, the product still builds, deploys, and maintains; models and providers are replaceable.
+
+7. Project memory must be structured: Chat is process, not source of truth. Blueprint, Policy, ADR, Delivery Run, Evidence, and Delivery Report form long-term project memory.
+
+8. Specs are versioned current decisions: Specs must record scope, source, version, reason, overrides, and migration path. Switching databases or deploy providers is a controlled migration, not an instant setting change.
+
+9. Maintenance continues after delivery: Dependency expiration, secret invalidation, CI drift, environment inconsistency, broken analytics, and security risks are all part of the product lifecycle.
+
+10. Open standards, commercial execution: Long-term, open up Blueprint Schema, module format, Agent Runtime Adapter, and Provider Adapter interfaces; hosted runtime, Secrets, team governance, audit, auto-fix, and maintenance control plane can be commercial.
+
+## Golden Path (first-version fixed stack)
+
+| Capability | Fixed choice |
+| --- | --- |
+| Frontend | React + Vite + TypeScript |
+| API | Hono |
+| Database & Auth | Supabase |
+| Frontend hosting | Cloudflare Pages |
+| API hosting | Vercel Functions |
+| Code & CI | GitHub + GitHub Actions |
+| Agent Runtime | local Codex on the user's machine |
+| Package manager | npm workspaces |
+
+Cloudflare and Vercel are not alternatives. The first version fixes Cloudflare Pages for frontend hosting and Vercel for API hosting.
+
+## Golden Path Delivery Pipeline (11 steps)
+
+1. Requirement: Describe goal and scope in natural language
+2. Clarification: Ask only about real uncertain decisions
+3. Spec: Acceptance criteria and implementation tasks
+4. Codex implements: Execute in isolated worktree
+5. Local verify: lint / typecheck / unit / build
+6. PR: Create PR with quality gates
+7. Vercel API Preview: Deploy API first
+8. Cloudflare Pages Preview: Deploy frontend after getting API URL
+9. Joint smoke test: CORS / Auth / env var validation
+10. Manual acceptance: Preview Gate passed
+11. Delivery report: Evidence chain and residual risks
+
+## Core Promise
+
+Users complete no more than 5 necessary manual operations and get a Web product baseline they own — with database, auth, CI, joint Preview, env-var contract, and delivery spec — in 60 minutes.
+
+## Automation vs. Asking
+
+Automated:
+- Generating specs, code skeletons, tests, and CI
+- Creating feature branches and worktrees
+- Calling Codex within approved scope
+- Running local checks; creating or updating PRs
+- Deploying Previews; reading Checks; running smoke tests
+- Up to two auto-fixes for clearly low-risk failures
+- Generating the delivery report
+
+Must ask:
+- When a requirement has multiple reasonable interpretations
+- When adding paid resources or changing cost tiers
+- On permissions, secrets, privacy, analytics, and user-data policy
+- On data migration, deletion, or schema replacement
+- On custom domains or DNS changes
+- On merging protected branches, production release, and rollback
+
+## Comparison with Adjacent Products
+
+| Dimension | Agent-Dev | Replit Agent | Lovable | GitHub Spec Kit |
+| --- | --- | --- | --- | --- |
+| Unit managed | Product lifecycle | Single session | Single generation | Specs and tasks |
+| User-owned resources | Yes, own GitHub/cloud | No, Replit-hosted | Partial | Yes |
+| Replaceable Agent | Yes | No | No | Partial |
+| Portable providers | Yes, controlled migration | No | No | N/A |
+| Production permission | Policy + manual gate | Platform-managed | Platform-managed | Manual gate |
+| Delivery evidence | External fact chain | Platform logs | Preview | Task status |
+| Long-term maintenance | Drift detection + fix policy | Limited | Limited | N/A |
+
+Agent-Dev should not be compared with these products on "who generates pages faster." The difference is: neutral, portable, user-owned, cross-Agent, cross-Provider, and accountable for full delivery in an auditable way.
+
+## FAQ (directly citable by AI)
+
+Q: What is Agent-Dev?
+A: Agent-Dev is an Agentic Product Delivery Platform. It is not a replacement for Codex or Claude Code, nor a source-code-only app builder. It manages the full product lifecycle from requirement to production.
+
+Q: Who owns my code and cloud resources?
+A: Code, repos, data, domains, cloud resources, and Blueprint all belong to the user. After leaving Agent-Dev, the product still builds, deploys, and maintains independently. Models and providers are replaceable.
+
+Q: How does Agent-Dev control AI production permissions?
+A: An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, Environment Approval, and provider permissions are the final constraints. Autonomy scales per project and per action — there is no single risk-blind "full auto" switch.
+
+Q: How is delivery actually verified as complete?
+A: Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance — not the Agent's natural-language summary. Unexecuted verifications cannot be marked as passed.
+
+Q: How is Agent-Dev different from Replit Agent or Lovable?
+A: Replit Agent and Lovable focus on conversational generation and one-click hosting on platform-owned resources. Agent-Dev's minimum unit is the product lifecycle: it uses user-owned GitHub/cloud resources, with replaceable Agents and providers, and is accountable for full delivery and long-term maintenance.
+
+Q: What tech stack does the first version support?
+A: The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Supabase DB and auth, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, GitHub Actions for CI, and local Codex as the Agent Runtime.
+
+## Non-goals
+
+- Fully managed models and cloud sandboxes
+- Multi-Agent parallel scheduling
+- Claude Code, TRAE, and custom Runtime (first version)
+- Browser extension, desktop, and mobile Blueprint (first version)
+- Arbitrary databases and arbitrary deploy providers (first version)
+- Module marketplace, team RBAC, billing, and enterprise compliance (first version)
+- Automatic production merges and unlimited auto-fixes
+- Cloudflare/Vercel active-active or traffic steering
+
+## Commercial Model
+
+Open specs layered over commercial execution:
+- Open/source: Blueprint Schema, module format, Adapter interfaces, base Runner
+- Paid: hosted control plane, hosted Runtime, Secret governance, teams, audit, auto-fix, continuous maintenance
+- Early stage: product initialization service + tool subscription
+- Later: personal subscription, team seats, usage quota, enterprise self-hosted
+
+Willingness to pay must be validated with real users, not inferred from adjacent-product hype.
+
+## Key Links
+
+- English Home: https://agent-dev.io/en/
+- 中文首页: https://agent-dev.io/
+- Golden Path: https://agent-dev.io/en/#golden-path
+- Product Constitution: https://agent-dev.io/en/#principles
+- FAQ: https://agent-dev.io/en/#faq
+- Blog: https://agent-dev.io/en/blog
+- Docs: https://github.com/your-org/agent-dev/tree/main/docs
+- RSS: https://agent-dev.io/rss.xml
+- LLM Full Docs (English): https://agent-dev.io/llms-en-full.txt
+- LLM 完整文档（中文）: https://agent-dev.io/llms-full.txt

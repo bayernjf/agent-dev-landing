@@ -1,0 +1,42 @@
+# Agent-Dev
+
+> Agent-Dev 是 Agentic Product Delivery Platform（AI Agent 驱动的产品工程与交付控制平台）。它把 AI 生成的代码变成可发布、可验证、可维护的产品，管理从需求到生产的完整生命周期。Agent-Dev 不是 Codex 或 Claude Code 的替代品，不是仅生成源码的应用构建器，也不是仅提供模板的脚手架。它管理的最小单位是产品生命周期，而不是一次任务、一个 PR 或一个仓库。
+
+## 完整文档
+
+完整可引用内容（含责任边界、产品宪法、Golden Path、对比表、FAQ 全文）：
+- [llms-full.txt（中文完整版）](https://agent-dev.io/llms-full.txt)
+- [llms-en-full.txt（English full docs）](https://agent-dev.io/llms-en-full.txt)
+
+## 产品定义（摘要）
+
+Agent-Dev 属于 Agentic Product Delivery Platform。用户负责产品目标、体验与关键取舍；Agent-Dev 负责把这些决定转化成可发布、可验证、可维护的工程系统。Agent-Dev 可以保证流程和证据完整，不能保证产品获得市场成功。
+
+## 核心差异化
+
+1. 用户拥有：代码、仓库、数据、域名、云资源和 Blueprint 归用户所有。退出 Agent-Dev 后，产品仍可独立构建、部署和维护。
+2. 中立可迁移：模型和供应商均可替换。不绑定特定 Agent Runtime 或云平台。
+3. 真实 Gate：大模型可以提出方案，但不能通过 Prompt 获得生产权限。确定性 Policy、GitHub Rulesets、Environment Approval 是最终约束。
+4. 证据链交付：交付状态以 GitHub Checks、Deployment Records、Preview URL、数据库状态、冒烟测试和人工验收为准，而非 Agent 的自然语言总结。
+
+## Golden Path（首版固定技术栈）
+
+- 前端：React + Vite + TypeScript
+- API：Hono
+- 数据库与认证：Supabase
+- 页面托管：Cloudflare Pages
+- API 托管：Vercel Functions
+- 代码与 CI：GitHub + GitHub Actions
+- Agent Runtime：用户电脑中的 Codex
+- 包管理：npm workspaces
+
+## 关键链接
+
+- [中文首页](https://agent-dev.io/)
+- [English Home](https://agent-dev.io/en/)
+- [Golden Path](https://agent-dev.io/#golden-path)
+- [产品宪法](https://agent-dev.io/#principles)
+- [常见问题](https://agent-dev.io/#faq)
+- [博客](https://agent-dev.io/blog)
+- [文档](https://github.com/your-org/agent-dev/tree/main/docs)
+- [RSS 订阅](https://agent-dev.io/rss.xml)

@@ -1,0 +1,42 @@
+# Agent-Dev
+
+> Agent-Dev is an Agentic Product Delivery Platform. It turns AI-generated code into shippable, verifiable, maintainable products and manages the full lifecycle from requirement to production. Agent-Dev is not a replacement for Codex or Claude Code, not a source-code-only app builder, and not a template scaffolder. Its minimum unit of management is the product lifecycle, not a single task, PR, or repository.
+
+## Full Documentation
+
+Complete citable content (responsibility boundary, product constitution, Golden Path, comparison table, full FAQ):
+- [llms-en-full.txt (English full docs)](https://agent-dev.io/llms-en-full.txt)
+- [llms-full.txt（中文完整版）](https://agent-dev.io/llms-full.txt)
+
+## Product Definition (Summary)
+
+Agent-Dev is an Agentic Product Delivery Platform. The user owns product goals, experience, and key trade-offs; Agent-Dev turns those decisions into a shippable, verifiable, maintainable engineering system. Agent-Dev guarantees process and evidence integrity, not market success.
+
+## Differentiators
+
+1. User-owned: Code, repos, data, domains, cloud resources, and Blueprint belong to the user. After leaving Agent-Dev, the product still builds, deploys, and maintains independently.
+2. Neutral and portable: Models and providers are replaceable. No lock-in to a specific Agent Runtime or cloud platform.
+3. Real gates: An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, and Environment Approval are the final constraints.
+4. Evidence-based delivery: Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance — not the Agent's natural-language summary.
+
+## Golden Path (first-version fixed stack)
+
+- Frontend: React + Vite + TypeScript
+- API: Hono
+- Database & Auth: Supabase
+- Frontend hosting: Cloudflare Pages
+- API hosting: Vercel Functions
+- Code & CI: GitHub + GitHub Actions
+- Agent Runtime: local Codex on the user's machine
+- Package manager: npm workspaces
+
+## Key Links
+
+- [English Home](https://agent-dev.io/en/)
+- [中文首页](https://agent-dev.io/)
+- [Golden Path](https://agent-dev.io/en/#golden-path)
+- [Product Constitution](https://agent-dev.io/en/#principles)
+- [FAQ](https://agent-dev.io/en/#faq)
+- [Blog](https://agent-dev.io/en/blog)
+- [Docs](https://github.com/your-org/agent-dev/tree/main/docs)
+- [RSS Feed](https://agent-dev.io/rss.xml)
