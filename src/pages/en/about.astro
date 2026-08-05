@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { SOCIAL } from '../../consts';
+
+const lang = 'en' as const;
+---
+
+<BaseLayout lang={lang} title="About Agent-Dev — Agentic Product Delivery Platform" description="Agent-Dev's positioning, responsibility boundary, and non-goals. Transparency builds trust.">
+  <Nav lang={lang} />
+  <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h1 class="text-3xl font-bold text-ink-50">About Agent-Dev</h1>
+
+    <div class="prose mt-8">
+      <p>Agent-Dev is an <strong>Agentic Product Delivery Platform</strong> — an AI-Agent-driven product engineering and delivery control platform.</p>
+
+      <p>As AI dramatically lowers the cost of code production, the bottleneck of product delivery shifts toward tech selection, account connection, env vars, permissions, CI, Preview, production release, acceptance, and long-term maintenance. Agent-Dev's goal is not to generate more code, but to give AI-generated software trustworthy delivery capability.</p>
+
+      <blockquote>
+        The user owns product goals, experience, and key trade-offs; Agent-Dev turns those decisions into a shippable, verifiable, maintainable engineering system.
+      </blockquote>
+
+      <h2>What Agent-Dev is not</h2>
+      <ul>
+        <li>A replacement for Codex or Claude Code</li>
+        <li>A source-code-only app builder</li>
+        <li>A template-only scaffolder</li>
+        <li>A pipeline-only ops platform</li>
+        <li>An Agent wrapper that relies on chat history for state</li>
+      </ul>
+
+      <p>Agent-Dev's minimum unit of management is the <strong>product lifecycle</strong>, not a single task, PR, or repository.</p>
+
+      <h2>Commercial model</h2>
+      <p>Open specs and commercial execution, layered:</p>
+      <ul>
+        <li>Open/source: Blueprint Schema, module format, Adapter interfaces, base Runner</li>
+        <li>Paid: hosted control plane, hosted Runtime, Secret governance, teams, audit, auto-fix, continuous maintenance</li>
+        <li>Early stage: product initialization service + tool subscription</li>
+        <li>Later: personal subscription, team seats, usage quota, enterprise self-hosted</li>
+      </ul>
+
+      <p>
+        <a href={SOCIAL.github} target="_blank" rel="noopener">View the project on GitHub →</a>
+      </p>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>
