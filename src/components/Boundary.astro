@@ -1,0 +1,94 @@
+---
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const isZh = lang === 'zh';
+
+const userResponsible = isZh
+  ? [
+      '产品服务谁、解决什么问题',
+      '功能范围、体验、审美与业务优先级',
+      '成本、隐私、数据和外部影响决策',
+      'Preview 体验验收',
+      '生产发布与最终 Approval',
+    ]
+  : [
+      'Who the product serves and what problem it solves',
+      'Feature scope, experience, aesthetics, and business priority',
+      'Cost, privacy, data, and external-impact decisions',
+      'Preview experience acceptance',
+      'Production release and final Approval',
+    ];
+
+const agentResponsible = isZh
+  ? [
+      '提供经过验证的产品 Blueprint 和默认规范',
+      '把需求转成规格、验收标准和实施任务',
+      '调用可替换的 Agent Runtime 实现、测试和修复代码',
+      '编排 GitHub、Supabase、Cloudflare、Vercel 等平台',
+      '执行确定性 Policy，限制 Agent 权限',
+      '聚合真实 CI、部署、测试和人工验收证据',
+      '识别漂移、过期配置和维护任务',
+      '给出明确的交付状态和残余风险',
+    ]
+  : [
+      'Provide verified product Blueprints and default standards',
+      'Turn requirements into specs, acceptance criteria, and tasks',
+      'Call replaceable Agent Runtimes to implement, test, and fix code',
+      'Orchestrate GitHub, Supabase, Cloudflare, Vercel, and more',
+      'Enforce deterministic Policy to constrain Agent permissions',
+      'Aggregate real CI, deploy, test, and manual-acceptance evidence',
+      'Detect drift, expired config, and maintenance tasks',
+      'Report clear delivery status and residual risks',
+    ];
+---
+
+<section id="boundary" class="border-t border-ink-800/60 bg-ink-900/30 py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-ink-50 sm:text-4xl">{t('boundary.title')}</h2>
+      <p class="mt-3 text-ink-400">{t('boundary.subtitle')}</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="rounded-xl border border-ink-800 bg-ink-900/60 p-6">
+        <h3 class="text-base font-semibold text-ink-50">
+          {isZh ? '用户负责' : 'User is responsible for'}
+        </h3>
+        <ul class="mt-4 space-y-2">
+          {userResponsible.map((item) => (
+            <li class="flex items-start gap-2 text-sm text-ink-300">
+              <span class="mt-1 text-brand-400">→</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-brand-500/30 bg-brand-500/5 p-6">
+        <h3 class="text-base font-semibold text-brand-200">
+          {isZh ? 'Agent-Dev 负责' : 'Agent-Dev is responsible for'}
+        </h3>
+        <ul class="mt-4 space-y-2">
+          {agentResponsible.map((item) => (
+            <li class="flex items-start gap-2 text-sm text-ink-200">
+              <span class="mt-1 text-brand-400">→</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <p class="mt-6 text-center text-sm text-ink-500">
+      {isZh
+        ? 'Agent-Dev 可以保证流程和证据完整，不能保证产品获得市场成功。'
+        : 'Agent-Dev guarantees process and evidence integrity, not market success.'}
+    </p>
+  </div>
+</section>

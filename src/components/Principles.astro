@@ -1,0 +1,70 @@
+---
+import { useTranslations, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const isZh = lang === 'zh';
+
+const principles = isZh
+  ? [
+      {
+        title: '默认优于选择',
+        desc: '新手模式替用户决定约 90% 的工程问题，只询问会改变产品、成本、隐私或风险的事项。候选项是逃生口，不是默认体验。',
+      },
+      {
+        title: 'AI 推理，Policy 授权',
+        desc: '大模型可以提出方案，但不能通过 Prompt 获得生产权限。确定性 Policy 与供应商权限是最终约束。',
+      },
+      {
+        title: '外部事实高于 Agent 自述',
+        desc: '交付状态以 GitHub Checks、Deployment Records、Preview URL 和冒烟测试为准，而非 Agent 的自然语言总结。',
+      },
+      {
+        title: '用户拥有产品',
+        desc: '代码、仓库、数据、域名、云资源和 Blueprint 归用户所有。模型和供应商均可替换。',
+      },
+    ]
+  : [
+      {
+        title: 'Defaults over choices',
+        desc: 'Beginner mode decides ~90% of engineering questions for the user, asking only about product, cost, privacy, or risk. Options are escape hatches, not the default experience.',
+      },
+      {
+        title: 'AI reasons, Policy authorizes',
+        desc: 'An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy and provider permissions are the final constraints.',
+      },
+      {
+        title: 'External facts over Agent self-report',
+        desc: 'Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, and smoke tests — not the Agent\'s natural-language summary.',
+      },
+      {
+        title: 'User owns the product',
+        desc: 'Code, repos, data, domains, cloud resources, and Blueprint belong to the user. Models and providers are replaceable.',
+      },
+    ];
+---
+
+<section id="principles" class="border-t border-ink-800/60 bg-ink-950 py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-ink-50 sm:text-4xl">{t('principles.title')}</h2>
+      <p class="mt-3 text-ink-400">{t('principles.subtitle')}</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {principles.map((p, i) => (
+        <div class="rounded-xl border border-ink-800 bg-ink-900/50 p-6">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-xs text-brand-400">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="text-base font-semibold text-ink-50">{p.title}</h3>
+          </div>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
