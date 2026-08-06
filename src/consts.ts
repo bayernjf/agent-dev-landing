@@ -14,8 +14,8 @@ export const DEFAULT_LOCALE = 'zh';
 
 // 社交与外部链接
 export const SOCIAL = {
-  github: 'https://github.com/your-org/agent-dev',
-  docs: 'https://github.com/your-org/agent-dev/tree/main/docs',
+  github: 'https://github.com/bayernjf/agent-dev',
+  docs: 'https://github.com/bayernjf/agent-dev/tree/main/docs',
   email: 'hello@agent-dev.io',
 };
 
