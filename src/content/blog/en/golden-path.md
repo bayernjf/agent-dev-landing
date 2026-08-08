@@ -38,7 +38,7 @@ Requirement -> Clarification -> Spec & acceptance criteria -> Codex implements
 
 ## Core Promise
 
-Users complete no more than 5 necessary manual operations and get a Web product baseline they own — with database, auth, CI, joint Preview, env-var contract, and delivery spec — in 60 minutes.
+Users complete no more than 5 necessary manual operations and get a Web product baseline they own, with database, auth, CI, joint Preview, env-var contract, and delivery spec, in 60 minutes.
 
 ## Automation vs. Asking
 
