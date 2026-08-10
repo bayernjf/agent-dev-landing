@@ -4,45 +4,45 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { SOCIAL } from '../consts';
 
-const lang = 'zh' as const;
+const lang = 'en' as const;
 ---
 
-<BaseLayout lang={lang} title="关于 Agent-Dev | Agentic Product Delivery Platform" description="Agent-Dev 的定位、责任边界与非目标。透明度建立信任。">
+<BaseLayout lang={lang} title="About Agent-Dev | Agentic Product Delivery Platform" description="Agent-Dev's positioning, responsibility boundary, and non-goals. Transparency builds trust.">
   <Nav lang={lang} />
   <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h1 class="text-3xl font-bold text-ink-50">关于 Agent-Dev</h1>
+    <h1 class="text-3xl font-bold text-ink-50">About Agent-Dev</h1>
 
     <div class="prose mt-8">
-      <p>Agent-Dev 属于 <strong>Agentic Product Delivery Platform</strong>，即 AI Agent 驱动的产品工程与交付控制平台。</p>
+      <p>Agent-Dev is an <strong>Agentic Product Delivery Platform</strong>: an AI-Agent-driven product engineering and delivery control platform.</p>
 
-      <p>随着 AI 大幅降低代码生产成本，产品交付的瓶颈正在转向技术选型、账号连接、环境变量、权限、CI、Preview、生产发布、验收和长期维护。Agent-Dev 的目标不是生成更多代码，而是让 AI 生成的软件具备可信赖的交付能力。</p>
+      <p>As AI dramatically lowers the cost of code production, the bottleneck of product delivery shifts toward tech selection, account connection, env vars, permissions, CI, Preview, production release, acceptance, and long-term maintenance. Agent-Dev's goal is not to generate more code, but to give AI-generated software trustworthy delivery capability.</p>
 
       <blockquote>
-        用户负责产品目标、体验与关键取舍；Agent-Dev 负责把这些决定转化成可发布、可验证、可维护的工程系统。
+        The user owns product goals, experience, and key trade-offs; Agent-Dev turns those decisions into a shippable, verifiable, maintainable engineering system.
       </blockquote>
 
-      <h2>Agent-Dev 不是什么</h2>
+      <h2>What Agent-Dev is not</h2>
       <ul>
-        <li>Codex 或 Claude Code 的替代品</li>
-        <li>仅生成源码的应用构建器</li>
-        <li>仅提供模板的脚手架</li>
-        <li>仅展示流水线的运维平台</li>
-        <li>依靠聊天记录维持状态的 Agent 包装器</li>
+        <li>A replacement for Codex or Claude Code</li>
+        <li>A source-code-only app builder</li>
+        <li>A template-only scaffolder</li>
+        <li>A pipeline-only ops platform</li>
+        <li>An Agent wrapper that relies on chat history for state</li>
       </ul>
 
-      <p>Agent-Dev 管理的最小单位是<strong>产品生命周期</strong>，而不是一次任务、一个 PR 或一个仓库。</p>
+      <p>Agent-Dev's minimum unit of management is the <strong>product lifecycle</strong>, not a single task, PR, or repository.</p>
 
-      <h2>商业化假设</h2>
-      <p>采用开放规范与商业执行分层：</p>
+      <h2>Commercial model</h2>
+      <p>Open specs and commercial execution, layered:</p>
       <ul>
-        <li>开源/开放：Blueprint Schema、模块格式、Adapter 接口、基础 Runner</li>
-        <li>付费：托管控制面、托管 Runtime、Secret 治理、团队、审计、自动修复、持续维护</li>
-        <li>早期：产品初始化服务 + 工具订阅</li>
-        <li>后期：个人订阅、团队席位、运行额度和企业私有部署</li>
+        <li>Open/source: Blueprint Schema, module format, Adapter interfaces, base Runner</li>
+        <li>Paid: hosted control plane, hosted Runtime, Secret governance, teams, audit, auto-fix, continuous maintenance</li>
+        <li>Early stage: product initialization service + tool subscription</li>
+        <li>Later: personal subscription, team seats, usage quota, enterprise self-hosted</li>
       </ul>
 
       <p>
-        <a href={SOCIAL.github} target="_blank" rel="noopener">在 GitHub 上查看项目 →</a>
+        <a href={SOCIAL.github} target="_blank" rel="noopener">View the project on GitHub →</a>
       </p>
     </div>
   </main>

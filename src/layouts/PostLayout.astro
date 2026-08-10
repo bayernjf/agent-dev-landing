@@ -24,7 +24,7 @@ const backHref = localizePath('/blog', lang);
 
 // 文章 URL（用于 schema 与 canonical）
 const slugPath = slug ? `/blog/${slug}` : '';
-const enSlugPath = slug ? `/en/blog/${slug}` : '';
+const enSlugPath = slug ? `/zh/blog/${slug}` : '';
 const articleUrl = `${SITE_URL.replace(/\/$/, '')}${localizePath(slugPath, lang)}`;
 
 // TechArticle schema：帮助 AI 识别为技术文章实体

@@ -10,7 +10,7 @@ export const SITE_DESCRIPTION_EN =
   'Agent-Dev is an Agentic Product Delivery Platform that turns AI-generated code into shippable, verifiable, maintainable products. Manage the full lifecycle from requirement to production.';
 export const AUTHOR = 'Agent-Dev';
 export const LOCALES = ['zh', 'en'] as const;
-export const DEFAULT_LOCALE = 'zh';
+export const DEFAULT_LOCALE = 'en';
 
 // 社交与外部链接
 export const SOCIAL = {
