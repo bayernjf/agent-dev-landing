@@ -4,49 +4,49 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import { SOCIAL } from '../../consts';
 
-const lang = 'en' as const;
+const lang = 'zh' as const;
 ---
 
-<BaseLayout lang={lang} title="Pricing | Agent-Dev" description="Agent-Dev layers open specs over commercial execution. Early stage offers product initialization service and tool subscription.">
+<BaseLayout lang={lang} title="定价 | Agent-Dev" description="Agent-Dev 采用开放规范与商业执行分层。早期提供产品初始化服务与工具订阅。">
   <Nav lang={lang} />
   <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-    <h1 class="text-3xl font-bold text-ink-50">Pricing</h1>
-    <p class="mt-2 text-ink-400">Open specs layered over commercial execution</p>
+    <h1 class="text-3xl font-bold text-ink-50">定价</h1>
+    <p class="mt-2 text-ink-400">开放规范与商业执行分层</p>
 
     <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
       <div class="rounded-xl border border-ink-800 bg-ink-900/60 p-6">
-        <h2 class="text-lg font-semibold text-ink-50">Open / Source</h2>
-        <p class="mt-1 text-xs text-brand-300">Free</p>
+        <h2 class="text-lg font-semibold text-ink-50">开放 / 开源</h2>
+        <p class="mt-1 text-xs text-brand-300">免费</p>
         <ul class="mt-4 space-y-2 text-sm text-ink-300">
           <li>Blueprint Schema</li>
-          <li>Module format</li>
-          <li>Adapter interfaces</li>
-          <li>Base Runner</li>
+          <li>模块格式</li>
+          <li>Adapter 接口</li>
+          <li>基础 Runner</li>
         </ul>
       </div>
 
       <div class="rounded-xl border border-brand-500/30 bg-brand-500/5 p-6">
-        <h2 class="text-lg font-semibold text-brand-200">Commercial Execution</h2>
-        <p class="mt-1 text-xs text-ink-400">Early stage: product init service + tool subscription</p>
+        <h2 class="text-lg font-semibold text-brand-200">商业执行</h2>
+        <p class="mt-1 text-xs text-ink-400">早期：产品初始化服务 + 工具订阅</p>
         <ul class="mt-4 space-y-2 text-sm text-ink-200">
-          <li>Hosted control plane</li>
-          <li>Hosted Runtime</li>
-          <li>Secret governance</li>
-          <li>Teams, audit, auto-fix</li>
-          <li>Continuous maintenance</li>
+          <li>托管控制面</li>
+          <li>托管 Runtime</li>
+          <li>Secret 治理</li>
+          <li>团队、审计、自动修复</li>
+          <li>持续维护</li>
         </ul>
       </div>
     </div>
 
     <div class="mt-10 rounded-lg border border-ink-800 bg-ink-900/40 p-6 text-center">
       <p class="text-sm text-ink-400">
-        Pricing is being finalized. Willingness to pay will be validated with real users, not inferred from adjacent-product hype.
+        定价方案正在制定中。付费意愿将通过真实用户验证，而非由相邻产品的市场热度直接推导。
       </p>
       <a
         href={`mailto:${SOCIAL.email}`}
         class="mt-4 inline-flex items-center justify-center rounded-lg border border-ink-700 px-5 py-2 text-sm text-ink-200 transition hover:border-ink-500 hover:text-white"
       >
-        Contact us about early access
+        联系我们了解早期方案
       </a>
     </div>
   </main>

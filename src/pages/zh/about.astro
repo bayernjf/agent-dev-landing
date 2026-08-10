@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { SOCIAL } from '../../consts';
+
+const lang = 'zh' as const;
+---
+
+<BaseLayout lang={lang} title="关于 Agent-Dev | Agentic Product Delivery Platform" description="Agent-Dev 的定位、责任边界与非目标。透明度建立信任。">
+  <Nav lang={lang} />
+  <main class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h1 class="text-3xl font-bold text-ink-50">关于 Agent-Dev</h1>
+
+    <div class="prose mt-8">
+      <p>Agent-Dev 属于 <strong>Agentic Product Delivery Platform</strong>，即 AI Agent 驱动的产品工程与交付控制平台。</p>
+
+      <p>随着 AI 大幅降低代码生产成本，产品交付的瓶颈正在转向技术选型、账号连接、环境变量、权限、CI、Preview、生产发布、验收和长期维护。Agent-Dev 的目标不是生成更多代码，而是让 AI 生成的软件具备可信赖的交付能力。</p>
+
+      <blockquote>
+        用户负责产品目标、体验与关键取舍；Agent-Dev 负责把这些决定转化成可发布、可验证、可维护的工程系统。
+      </blockquote>
+
+      <h2>Agent-Dev 不是什么</h2>
+      <ul>
+        <li>Codex 或 Claude Code 的替代品</li>
+        <li>仅生成源码的应用构建器</li>
+        <li>仅提供模板的脚手架</li>
+        <li>仅展示流水线的运维平台</li>
+        <li>依靠聊天记录维持状态的 Agent 包装器</li>
+      </ul>
+
+      <p>Agent-Dev 管理的最小单位是<strong>产品生命周期</strong>，而不是一次任务、一个 PR 或一个仓库。</p>
+
+      <h2>商业化假设</h2>
+      <p>采用开放规范与商业执行分层：</p>
+      <ul>
+        <li>开源/开放：Blueprint Schema、模块格式、Adapter 接口、基础 Runner</li>
+        <li>付费：托管控制面、托管 Runtime、Secret 治理、团队、审计、自动修复、持续维护</li>
+        <li>早期：产品初始化服务 + 工具订阅</li>
+        <li>后期：个人订阅、团队席位、运行额度和企业私有部署</li>
+      </ul>
+
+      <p>
+        <a href={SOCIAL.github} target="_blank" rel="noopener">在 GitHub 上查看项目 →</a>
+      </p>
+    </div>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>
