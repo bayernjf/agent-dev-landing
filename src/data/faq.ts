@@ -53,12 +53,12 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: 'How does Agent-Dev control AI production permissions?',
       answer:
-        'An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, Environment Approval, and provider permissions are the final constraints. Autonomy scales per project and per action — there is no single risk-blind "full auto" switch.',
+        'An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, Environment Approval, and provider permissions are the final constraints. Autonomy scales per project and per action; there is no single risk-blind "full auto" switch.',
     },
     {
       question: 'How is delivery actually verified as complete?',
       answer:
-        'Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance — not the Agent\'s natural-language summary. Unexecuted verifications cannot be marked as passed.',
+        'Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance, not the Agent\'s natural-language summary. Unexecuted verifications cannot be marked as passed.',
     },
     {
       question: 'How is Agent-Dev different from Replit Agent or Lovable?',

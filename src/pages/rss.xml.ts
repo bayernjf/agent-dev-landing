@@ -9,7 +9,7 @@ export async function GET(context: APIContext) {
 
   return rss({
     title: 'Agent-Dev Blog',
-    description: 'Agentic Product Delivery — practices, architecture, and Golden Path deep dives.',
+    description: 'Agentic Product Delivery: practices, architecture, and Golden Path deep dives.',
     site: context.site ?? SITE_URL,
     items: sorted.map((post) => ({
       title: post.data.title,

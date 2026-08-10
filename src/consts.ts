@@ -3,7 +3,7 @@
 
 export const SITE_URL = 'https://agent-dev.io';
 export const SITE_NAME = 'Agent-Dev';
-export const SITE_TITLE = 'Agent-Dev — Agentic Product Delivery Platform';
+export const SITE_TITLE = 'Agent-Dev | Agentic Product Delivery Platform';
 export const SITE_DESCRIPTION =
   'Agent-Dev 是 Agentic Product Delivery Platform，把 AI 生成的代码变成可发布、可验证、可维护的产品。管理从需求到生产的完整生命周期。';
 export const SITE_DESCRIPTION_EN =
