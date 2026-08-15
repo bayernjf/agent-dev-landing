@@ -173,13 +173,13 @@ A: 首版固定 Web SaaS Golden Path：React + Vite + TypeScript 前端、Hono A
 
 ## 关键链接
 
-- 中文首页: https://agent-dev.io/
-- English Home: https://agent-dev.io/en/
-- Golden Path: https://agent-dev.io/#golden-path
-- 产品宪法: https://agent-dev.io/#principles
-- 常见问题: https://agent-dev.io/#faq
-- 博客: https://agent-dev.io/blog
+- 中文首页: https://agent-dev.bayjf.com/
+- English Home: https://agent-dev.bayjf.com/en/
+- Golden Path: https://agent-dev.bayjf.com/#golden-path
+- 产品宪法: https://agent-dev.bayjf.com/#principles
+- 常见问题: https://agent-dev.bayjf.com/#faq
+- 博客: https://agent-dev.bayjf.com/blog
 - 文档: https://github.com/your-org/agent-dev/tree/main/docs
-- RSS: https://agent-dev.io/rss.xml
-- LLM 完整文档（中文）: https://agent-dev.io/llms-full.txt
-- LLM Full Docs (English): https://agent-dev.io/llms-en-full.txt
+- RSS: https://agent-dev.bayjf.com/rss.xml
+- LLM 完整文档（中文）: https://agent-dev.bayjf.com/llms-full.txt
+- LLM Full Docs (English): https://agent-dev.bayjf.com/llms-en-full.txt
