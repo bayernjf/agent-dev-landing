@@ -16,7 +16,7 @@ export const DEFAULT_LOCALE = 'en';
 export const SOCIAL = {
   github: 'https://github.com/bayernjf/agent-dev',
   docs: 'https://github.com/bayernjf/agent-dev/tree/main/docs',
-  email: 'hello@agent-dev.io',
+  email: 'b4yernjf@gmail.com',
 };
 
 // 默认 OG 图片
