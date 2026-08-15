@@ -1,7 +1,7 @@
 // 站点级常量，集中管理便于跨页面/组件复用
 // 部署到自定义域名后，需同步修改 astro.config.mjs 的 site 字段
 
-export const SITE_URL = 'https://agent-dev.io';
+export const SITE_URL = 'https://agent-dev.bayjf.com';
 export const SITE_NAME = 'Agent-Dev';
 export const SITE_TITLE = 'Agent-Dev | Agentic Product Delivery Platform';
 export const SITE_DESCRIPTION =

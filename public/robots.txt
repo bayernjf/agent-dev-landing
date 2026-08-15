@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agent-dev.io/sitemap-index.xml
+Sitemap: https://agent-dev.bayjf.com/sitemap-index.xml

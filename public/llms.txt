@@ -5,8 +5,8 @@
 ## 完整文档
 
 完整可引用内容（含责任边界、产品宪法、Golden Path、对比表、FAQ 全文）：
-- [llms-full.txt（中文完整版）](https://agent-dev.io/llms-full.txt)
-- [llms-en-full.txt（English full docs）](https://agent-dev.io/llms-en-full.txt)
+- [llms-full.txt（中文完整版）](https://agent-dev.bayjf.com/llms-full.txt)
+- [llms-en-full.txt（English full docs）](https://agent-dev.bayjf.com/llms-en-full.txt)
 
 ## 产品定义（摘要）
 
@@ -32,11 +32,11 @@ Agent-Dev 属于 Agentic Product Delivery Platform。用户负责产品目标、
 
 ## 关键链接
 
-- [中文首页](https://agent-dev.io/)
-- [English Home](https://agent-dev.io/en/)
-- [Golden Path](https://agent-dev.io/#golden-path)
-- [产品宪法](https://agent-dev.io/#principles)
-- [常见问题](https://agent-dev.io/#faq)
-- [博客](https://agent-dev.io/blog)
+- [中文首页](https://agent-dev.bayjf.com/)
+- [English Home](https://agent-dev.bayjf.com/en/)
+- [Golden Path](https://agent-dev.bayjf.com/#golden-path)
+- [产品宪法](https://agent-dev.bayjf.com/#principles)
+- [常见问题](https://agent-dev.bayjf.com/#faq)
+- [博客](https://agent-dev.bayjf.com/blog)
 - [文档](https://github.com/your-org/agent-dev/tree/main/docs)
-- [RSS 订阅](https://agent-dev.io/rss.xml)
+- [RSS 订阅](https://agent-dev.bayjf.com/rss.xml)

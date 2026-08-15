@@ -173,13 +173,13 @@ Willingness to pay must be validated with real users, not inferred from adjacent
 
 ## Key Links
 
-- English Home: https://agent-dev.io/en/
-- 中文首页: https://agent-dev.io/
-- Golden Path: https://agent-dev.io/en/#golden-path
-- Product Constitution: https://agent-dev.io/en/#principles
-- FAQ: https://agent-dev.io/en/#faq
-- Blog: https://agent-dev.io/en/blog
+- English Home: https://agent-dev.bayjf.com/en/
+- 中文首页: https://agent-dev.bayjf.com/
+- Golden Path: https://agent-dev.bayjf.com/en/#golden-path
+- Product Constitution: https://agent-dev.bayjf.com/en/#principles
+- FAQ: https://agent-dev.bayjf.com/en/#faq
+- Blog: https://agent-dev.bayjf.com/en/blog
 - Docs: https://github.com/your-org/agent-dev/tree/main/docs
-- RSS: https://agent-dev.io/rss.xml
-- LLM Full Docs (English): https://agent-dev.io/llms-en-full.txt
-- LLM 完整文档（中文）: https://agent-dev.io/llms-full.txt
+- RSS: https://agent-dev.bayjf.com/rss.xml
+- LLM Full Docs (English): https://agent-dev.bayjf.com/llms-en-full.txt
+- LLM 完整文档（中文）: https://agent-dev.bayjf.com/llms-full.txt

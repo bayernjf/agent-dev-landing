@@ -5,8 +5,8 @@
 ## Full Documentation
 
 Complete citable content (responsibility boundary, product constitution, Golden Path, comparison table, full FAQ):
-- [llms-en-full.txt (English full docs)](https://agent-dev.io/llms-en-full.txt)
-- [llms-full.txt（中文完整版）](https://agent-dev.io/llms-full.txt)
+- [llms-en-full.txt (English full docs)](https://agent-dev.bayjf.com/llms-en-full.txt)
+- [llms-full.txt（中文完整版）](https://agent-dev.bayjf.com/llms-full.txt)
 
 ## Product Definition (Summary)
 
@@ -32,11 +32,11 @@ Agent-Dev is an Agentic Product Delivery Platform. The user owns product goals, 
 
 ## Key Links
 
-- [English Home](https://agent-dev.io/en/)
-- [中文首页](https://agent-dev.io/)
-- [Golden Path](https://agent-dev.io/en/#golden-path)
-- [Product Constitution](https://agent-dev.io/en/#principles)
-- [FAQ](https://agent-dev.io/en/#faq)
-- [Blog](https://agent-dev.io/en/blog)
+- [English Home](https://agent-dev.bayjf.com/en/)
+- [中文首页](https://agent-dev.bayjf.com/)
+- [Golden Path](https://agent-dev.bayjf.com/en/#golden-path)
+- [Product Constitution](https://agent-dev.bayjf.com/en/#principles)
+- [FAQ](https://agent-dev.bayjf.com/en/#faq)
+- [Blog](https://agent-dev.bayjf.com/en/blog)
 - [Docs](https://github.com/your-org/agent-dev/tree/main/docs)
-- [RSS Feed](https://agent-dev.io/rss.xml)
+- [RSS Feed](https://agent-dev.bayjf.com/rss.xml)
