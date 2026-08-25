@@ -22,7 +22,7 @@ Agent-Dev v0.1 通过一条固定 Web SaaS Golden Path 验证：这些工作能�
 | 页面托管 | Cloudflare Pages |
 | API 托管 | Vercel Functions |
 | 代码与 CI | GitHub + GitHub Actions |
-| Agent Runtime | 用户电脑中的 Codex |
+| Agent Runtime | 用户电脑中的 coding agent（Codex、OpenCode、Claude Code 等可选） |
 | 包管理 | npm workspaces |
 
 Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Pages 托管前端、Vercel 托管 API。
@@ -30,7 +30,7 @@ Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Page
 ## 交付一个功能的完整链路
 
 ```text
-需求 -> 决策澄清 -> 规格与验收标准 -> Codex 实现
+需求 -> 决策澄清 -> 规格与验收标准 -> Agent 实现
 -> 本地验证 -> PR -> Vercel API Preview
 -> Cloudflare Pages Preview -> 联合冒烟测试
 -> 人工验收 -> 交付报告
@@ -44,6 +44,6 @@ Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Page
 
 ## 自动与询问的边界
 
-自动执行：生成规范、代码骨架、测试和 CI；创建 feature 分支和 worktree；调用 Codex 实现已批准范围；运行本地检查、创建或更新 PR；部署 Preview、读取 Checks、执行冒烟测试；对明确的低风险失败进行最多两次修复；生成交付报告。
+自动执行：生成规范、代码骨架、测试和 CI；创建 feature 分支和 worktree；调用所选 Agent Runtime 实现已批准范围；运行本地检查、创建或更新 PR；部署 Preview、读取 Checks、执行冒烟测试；对明确的低风险失败进行最多两次修复；生成交付报告。
 
 必须询问：产品需求存在多种合理解释；新增付费资源或改变费用等级；权限、Secret、隐私、埋点和用户数据策略；数据迁移、删除和架构替换；自定义域名或 DNS 变更；合并受保护分支、生产发布和回滚。

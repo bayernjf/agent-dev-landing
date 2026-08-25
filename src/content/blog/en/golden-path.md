@@ -22,7 +22,7 @@ Agent-Dev v0.1 validates one fixed Web SaaS Golden Path: can this work be signif
 | Frontend hosting | Cloudflare Pages |
 | API hosting | Vercel Functions |
 | Code & CI | GitHub + GitHub Actions |
-| Agent Runtime | local Codex on the user's machine |
+| Agent Runtime | a coding agent on the user's machine (Codex, OpenCode, Claude Code, and others are selectable) |
 | Package manager | npm workspaces |
 
 Cloudflare and Vercel are not alternatives. The first version fixes Cloudflare Pages for frontend hosting and Vercel for API hosting.
@@ -30,7 +30,7 @@ Cloudflare and Vercel are not alternatives. The first version fixes Cloudflare P
 ## The Full Delivery Pipeline
 
 ```text
-Requirement -> Clarification -> Spec & acceptance criteria -> Codex implements
+Requirement -> Clarification -> Spec & acceptance criteria -> Agent implements
 -> Local verify -> PR -> Vercel API Preview
 -> Cloudflare Pages Preview -> Joint smoke test
 -> Manual acceptance -> Delivery report
@@ -44,6 +44,6 @@ Users get a Web product baseline they own, with database, auth, CI, joint Previe
 
 ## Automation vs. Asking
 
-Automated: generating specs, code skeletons, tests, and CI; creating feature branches and worktrees; calling Codex within approved scope; running local checks; creating or updating PRs; deploying Previews; reading Checks; running smoke tests; up to two auto-fixes for clearly low-risk failures; generating the delivery report.
+Automated: generating specs, code skeletons, tests, and CI; creating feature branches and worktrees; calling the selected Agent Runtime within approved scope; running local checks; creating or updating PRs; deploying Previews; reading Checks; running smoke tests; up to two auto-fixes for clearly low-risk failures; generating the delivery report.
 
 Must ask: when a requirement has multiple reasonable interpretations; when adding paid resources or changing cost tiers; on permissions, secrets, privacy, analytics, and user-data policy; on data migration, deletion, or schema replacement; on custom domains or DNS changes; on merging protected branches, production release, and rollback.

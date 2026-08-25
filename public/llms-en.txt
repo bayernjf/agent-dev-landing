@@ -27,7 +27,7 @@ Agent-Dev is an Agentic Product Delivery Platform. The user owns product goals, 
 - Frontend hosting: Cloudflare Pages
 - API hosting: Vercel Functions
 - Code & CI: GitHub + GitHub Actions
-- Agent Runtime: local Codex on the user's machine
+- Agent Runtime: a coding agent on the user's machine (Codex, OpenCode, Claude Code, and others are selectable)
 - Package manager: npm workspaces
 
 ## Key Links

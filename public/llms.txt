@@ -27,7 +27,7 @@ Agent-Dev 属于 Agentic Product Delivery Platform。用户负责产品目标、
 - 页面托管：Cloudflare Pages
 - API 托管：Vercel Functions
 - 代码与 CI：GitHub + GitHub Actions
-- Agent Runtime：用户电脑中的 Codex
+- Agent Runtime：用户电脑中的 coding agent（Codex、OpenCode、Claude Code 等可选）
 - 包管理：npm workspaces
 
 ## 关键链接

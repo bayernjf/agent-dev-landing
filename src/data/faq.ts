@@ -36,7 +36,17 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: '首版支持哪些技术栈？',
       answer:
-        '首版的 Web SaaS Golden Path 固定为：React + Vite + TypeScript 前端、Hono API、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI；数据库与认证使用 Supabase，走引导式手动接入。Agent Runtime 是运行在本地的 Codex。',
+        '首版的 Web SaaS Golden Path 固定为：React + Vite + TypeScript 前端、Hono API、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI；数据库与认证使用 Supabase，走引导式手动接入。Agent Runtime 运行在你自己的电脑上，可在 Codex、OpenCode、Claude Code 等已安装的 coding agent 中选择。',
+    },
+    {
+      question: '支持哪些产品形态？',
+      answer:
+        'Web SaaS、落地页、浏览器插件（MV3）和桌面端（Tauri v2）都已能生成真实可构建的工程模板。浏览器插件与桌面端只交付本地可构建产物，不接入云部署管线；移动端和 API 工具目前只提供引导式交接文档。',
+    },
+    {
+      question: 'Agent-Dev 现在可以怎么运行？',
+      answer:
+        'v0.1 是 local-first 的本地应用，不是托管 SaaS：控制面跑在你自己的电脑上，直接复用你已登录的 GitHub、Vercel、Cloudflare CLI 和本机 coding agent。当前仍处于 v0.1 实验阶段，不是可用于生产的稳定版本。',
     },
   ],
   en: [
@@ -68,7 +78,17 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: 'What tech stack does the first version support?',
       answer:
-        'The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, and GitHub Actions for CI. Database and auth use Supabase through a guided manual setup. The Agent Runtime is a local Codex.',
+        'The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, and GitHub Actions for CI. Supabase provides DB and auth through a guided manual setup. The Agent Runtime runs on your own machine, selectable among installed coding agents such as Codex, OpenCode, and Claude Code.',
+    },
+    {
+      question: 'Which product types are supported?',
+      answer:
+        'Web SaaS, landing pages, browser extensions (MV3), and desktop apps (Tauri v2) all generate real, buildable project templates. Extensions and desktop apps ship a locally buildable artifact only, without the cloud deploy pipeline; mobile and API tools currently provide guided handoff documents only.',
+    },
+    {
+      question: 'How does Agent-Dev run today?',
+      answer:
+        'v0.1 is a local-first application, not a hosted SaaS: the control plane runs on your own machine and reuses your existing GitHub, Vercel, and Cloudflare CLI logins plus a local coding agent. It is still a v0.1 experiment, not a production-ready release.',
     },
   ],
 };
