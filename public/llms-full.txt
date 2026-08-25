@@ -26,7 +26,7 @@ Agent-Dev 负责：
 - 提供经过验证的产品 Blueprint 和默认规范
 - 把需求转成规格、验收标准和实施任务
 - 调用可替换的 Agent Runtime 实现、测试和修复代码
-- 编排 GitHub、Supabase、Cloudflare、Vercel 等平台
+- 编排 GitHub、Cloudflare、Vercel 等平台，Supabase 走引导式手动接入
 - 执行确定性 Policy，限制 Agent 权限
 - 聚合真实 CI、部署、测试和人工验收证据
 - 识别漂移、过期配置和维护任务
@@ -70,21 +70,25 @@ Agent-Dev 负责：
 | --- | --- |
 | 前端 | React + Vite + TypeScript |
 | API | Hono |
-| 数据库、认证 | Supabase |
+| 数据库、认证 | Supabase（引导式手动接入） |
 | 页面托管 | Cloudflare Pages |
 | API 托管 | Vercel Functions |
 | 代码与 CI | GitHub + GitHub Actions |
-| Agent Runtime | 用户电脑中的 Codex |
+| Agent Runtime | 用户电脑中的 coding agent（Codex、OpenCode、Claude Code 等可选） |
 | 包管理 | npm workspaces |
 
 Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Pages 托管前端、Vercel 托管 API。
+
+## 已支持的产品形态
+
+Web SaaS、落地页、浏览器插件（MV3）和桌面端（Tauri v2）都已能生成真实可构建的工程模板。浏览器插件与桌面端只交付本地可构建产物，不接入云部署管线；移动端和 API 工具目前只提供引导式交接文档。
 
 ## Golden Path 交付流程（11 步）
 
 1. 需求：自然语言描述目标与范围
 2. 决策澄清：仅对真实不确定决策提问
 3. 规格：验收标准与实施任务
-4. Codex 实现：隔离 worktree 中执行
+4. Agent 实现：在隔离 worktree 中执行，Runtime 可选
 5. 本地验证：lint / typecheck / unit / build
 6. PR：创建 PR 与质量门禁
 7. Vercel API Preview：API 先部署
@@ -93,16 +97,20 @@ Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Page
 10. 人工验收：Preview Gate 通过
 11. 交付报告：证据链与残余风险
 
-## 核心承诺
+## 核心目标
 
-用户完成不超过 5 个必要人工操作，在 60 分钟内获得一个归自己所有、具备数据库、认证、CI、联合 Preview、环境变量契约和交付规范的 Web 产品基线。
+让用户获得一个归自己所有、具备数据库、认证、CI、联合 Preview、环境变量契约和交付规范的 Web 产品基线，人工操作只留在真正需要产品决策的地方。「不超过 5 个必要人工操作」是 v0.1 的设计指标，不是已经测得的结果。
+
+## 运行形态
+
+v0.1 是 local-first 的本地应用，不是托管 SaaS：控制面跑在用户自己的电脑上，直接复用已登录的 GitHub、Vercel、Cloudflare CLI 和本机 coding agent。当前仍处于 v0.1 实验阶段，不是可用于生产的稳定版本。
 
 ## 自动与询问边界
 
 自动执行：
 - 生成规范、代码骨架、测试和 CI
 - 创建 feature 分支和 worktree
-- 调用 Codex 实现已批准范围
+- 调用所选 Agent Runtime 实现已批准范围
 - 运行本地检查、创建或更新 PR
 - 部署 Preview、读取 Checks、执行冒烟测试
 - 对明确的低风险失败进行最多两次修复
@@ -126,7 +134,7 @@ Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Page
 | Provider 可迁移 | 是，受控迁移 | 否 | 否 | 不涉及 |
 | 生产权限 | Policy + 人工 Gate | 平台托管 | 平台托管 | 人工 Gate |
 | 交付证据 | 外部事实链 | 平台日志 | Preview | 任务状态 |
-| 长期维护 | 漂移检测 + 修复策略 | 有限 | 有限 | 不涉及 |
+| 长期维护 | 证据留存（漂移检测规划中） | 有限 | 有限 | 不涉及 |
 
 Agent-Dev 不应与这些产品比较"谁生成页面更快"。差异是：中立、可迁移、用户拥有、跨 Agent、跨 Provider、可审计地对完整交付负责。
 
@@ -148,14 +156,20 @@ Q: Agent-Dev 与 Replit Agent / Lovable 有什么区别？
 A: Replit Agent 和 Lovable 侧重对话式生成与一键上线，资源由平台托管。Agent-Dev 管理的最小单位是产品生命周期，使用用户自有的 GitHub/云资源，Agent 和 Provider 可替换，并对完整交付和长期维护负责。
 
 Q: 首版支持哪些技术栈？
-A: 首版固定 Web SaaS Golden Path：React + Vite + TypeScript 前端、Hono API、Supabase 数据库与认证、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI、本地 Codex 作为 Agent Runtime。
+A: 首版的 Web SaaS Golden Path 固定为：React + Vite + TypeScript 前端、Hono API、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI；数据库与认证使用 Supabase，走引导式手动接入。Agent Runtime 运行在用户自己的电脑上，可在 Codex、OpenCode、Claude Code 等已安装的 coding agent 中选择。
+
+Q: 支持哪些产品形态？
+A: Web SaaS、落地页、浏览器插件（MV3）和桌面端（Tauri v2）都已能生成真实可构建的工程模板。浏览器插件与桌面端只交付本地可构建产物，不接入云部署管线；移动端和 API 工具目前只提供引导式交接文档。
+
+Q: Agent-Dev 现在可以怎么运行？
+A: v0.1 是 local-first 的本地应用，不是托管 SaaS：控制面跑在用户自己的电脑上，直接复用已登录的 GitHub、Vercel、Cloudflare CLI 和本机 coding agent。当前仍处于 v0.1 实验阶段，不是可用于生产的稳定版本。
 
 ## 非目标
 
 - 完全托管的模型和云端 Sandbox
 - 多 Agent 并行调度
-- Claude Code、TRAE 和自定义 Runtime（首版）
-- 浏览器扩展、桌面端和移动端 Blueprint（首版）
+- 移动端和 API 工具的完整交付管线（当前为引导式交接）
+- 浏览器插件与桌面端的云部署管线（模板已生成，仅交付本地可构建产物）
 - 任意数据库和任意部署供应商（首版）
 - 模块市场、团队 RBAC、计费和企业合规（首版）
 - 自动生产合并和无限自动修复
@@ -173,13 +187,13 @@ A: 首版固定 Web SaaS Golden Path：React + Vite + TypeScript 前端、Hono A
 
 ## 关键链接
 
-- 中文首页: https://agent-dev.bayjf.com/
-- English Home: https://agent-dev.bayjf.com/en/
+- 中文首页: https://agent-dev.bayjf.com/zh/
+- English Home: https://agent-dev.bayjf.com/
 - Golden Path: https://agent-dev.bayjf.com/#golden-path
 - 产品宪法: https://agent-dev.bayjf.com/#principles
 - 常见问题: https://agent-dev.bayjf.com/#faq
 - 博客: https://agent-dev.bayjf.com/blog
-- 文档: https://github.com/your-org/agent-dev/tree/main/docs
+- 文档: https://github.com/bayernjf/agent-dev/tree/main/docs
 - RSS: https://agent-dev.bayjf.com/rss.xml
 - LLM 完整文档（中文）: https://agent-dev.bayjf.com/llms-full.txt
 - LLM Full Docs (English): https://agent-dev.bayjf.com/llms-en-full.txt

@@ -11,7 +11,7 @@ export const goldenPathSteps: Record<'zh' | 'en', PathStep[]> = {
     { label: '需求', desc: '自然语言描述目标与范围' },
     { label: '决策澄清', desc: '仅对真实不确定决策提问' },
     { label: '规格', desc: '验收标准与实施任务' },
-    { label: 'Codex 实现', desc: '隔离 worktree 中执行' },
+    { label: 'Agent 实现', desc: '在隔离 worktree 中执行，Runtime 可选' },
     { label: '本地验证', desc: 'lint / typecheck / unit / build' },
     { label: 'PR', desc: '创建 PR 与质量门禁' },
     { label: 'Vercel API Preview', desc: 'API 先部署' },
@@ -24,7 +24,7 @@ export const goldenPathSteps: Record<'zh' | 'en', PathStep[]> = {
     { label: 'Requirement', desc: 'Describe goal and scope in natural language' },
     { label: 'Clarification', desc: 'Ask only about real uncertain decisions' },
     { label: 'Spec', desc: 'Acceptance criteria and implementation tasks' },
-    { label: 'Codex implements', desc: 'Execute in isolated worktree' },
+    { label: 'Agent implements', desc: 'Runs in an isolated worktree; runtime is selectable' },
     { label: 'Local verify', desc: 'lint / typecheck / unit / build' },
     { label: 'PR', desc: 'Create PR with quality gates' },
     { label: 'Vercel API Preview', desc: 'Deploy API first' },
@@ -44,8 +44,8 @@ export function buildHowToSchema(lang: 'zh' | 'en', siteUrl: string) {
     name: lang === 'zh' ? 'Agent-Dev Golden Path：从需求到交付' : 'Agent-Dev Golden Path: from requirement to delivery',
     description:
       lang === 'zh'
-        ? '从需求到交付报告的完整链路，用户完成不超过 5 个必要人工操作。'
-        : 'The complete pipeline from requirement to delivery report, with no more than 5 necessary manual operations.',
+        ? '从需求到交付报告的完整链路，每一步都以真实证据判定是否完成。'
+        : 'The complete pipeline from requirement to delivery report, with every step judged complete by real evidence.',
     inLanguage: lang === 'zh' ? 'zh-CN' : 'en-US',
     step: steps.map((s, i) => ({
       '@type': 'HowToStep',
