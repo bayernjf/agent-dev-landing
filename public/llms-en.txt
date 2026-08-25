@@ -17,7 +17,7 @@ Agent-Dev is an Agentic Product Delivery Platform. The user owns product goals, 
 1. User-owned: Code, repos, data, domains, cloud resources, and Blueprint belong to the user. After leaving Agent-Dev, the product still builds, deploys, and maintains independently.
 2. Neutral and portable: Models and providers are replaceable. No lock-in to a specific Agent Runtime or cloud platform.
 3. Real gates: An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, and Environment Approval are the final constraints.
-4. Evidence-based delivery: Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance — not the Agent's natural-language summary.
+4. Evidence-based delivery: Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance, not the Agent's natural-language summary.
 
 ## Golden Path (first-version fixed stack)
 
