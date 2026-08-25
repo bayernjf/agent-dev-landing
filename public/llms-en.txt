@@ -32,11 +32,11 @@ Agent-Dev is an Agentic Product Delivery Platform. The user owns product goals, 
 
 ## Key Links
 
-- [English Home](https://agent-dev.bayjf.com/en/)
-- [中文首页](https://agent-dev.bayjf.com/)
-- [Golden Path](https://agent-dev.bayjf.com/en/#golden-path)
-- [Product Constitution](https://agent-dev.bayjf.com/en/#principles)
-- [FAQ](https://agent-dev.bayjf.com/en/#faq)
-- [Blog](https://agent-dev.bayjf.com/en/blog)
-- [Docs](https://github.com/your-org/agent-dev/tree/main/docs)
+- [English Home](https://agent-dev.bayjf.com/)
+- [中文首页](https://agent-dev.bayjf.com/zh/)
+- [Golden Path](https://agent-dev.bayjf.com/#golden-path)
+- [Product Constitution](https://agent-dev.bayjf.com/#principles)
+- [FAQ](https://agent-dev.bayjf.com/#faq)
+- [Blog](https://agent-dev.bayjf.com/blog)
+- [Docs](https://github.com/bayernjf/agent-dev/tree/main/docs)
 - [RSS Feed](https://agent-dev.bayjf.com/rss.xml)

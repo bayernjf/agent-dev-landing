@@ -32,11 +32,11 @@ Agent-Dev 属于 Agentic Product Delivery Platform。用户负责产品目标、
 
 ## 关键链接
 
-- [中文首页](https://agent-dev.bayjf.com/)
-- [English Home](https://agent-dev.bayjf.com/en/)
+- [中文首页](https://agent-dev.bayjf.com/zh/)
+- [English Home](https://agent-dev.bayjf.com/)
 - [Golden Path](https://agent-dev.bayjf.com/#golden-path)
 - [产品宪法](https://agent-dev.bayjf.com/#principles)
 - [常见问题](https://agent-dev.bayjf.com/#faq)
 - [博客](https://agent-dev.bayjf.com/blog)
-- [文档](https://github.com/your-org/agent-dev/tree/main/docs)
+- [文档](https://github.com/bayernjf/agent-dev/tree/main/docs)
 - [RSS 订阅](https://agent-dev.bayjf.com/rss.xml)
