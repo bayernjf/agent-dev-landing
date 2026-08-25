@@ -23,7 +23,7 @@ Agent-Dev is an Agentic Product Delivery Platform. The user owns product goals, 
 
 - Frontend: React + Vite + TypeScript
 - API: Hono
-- Database & Auth: Supabase
+- Database & Auth: Supabase (guided manual setup)
 - Frontend hosting: Cloudflare Pages
 - API hosting: Vercel Functions
 - Code & CI: GitHub + GitHub Actions

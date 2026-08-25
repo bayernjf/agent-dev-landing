@@ -36,7 +36,7 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: '首版支持哪些技术栈？',
       answer:
-        '首版固定 Web SaaS Golden Path：React + Vite + TypeScript 前端、Hono API、Supabase 数据库与认证、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI、本地 Codex 作为 Agent Runtime。',
+        '首版的 Web SaaS Golden Path 固定为：React + Vite + TypeScript 前端、Hono API、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI；数据库与认证使用 Supabase，走引导式手动接入。Agent Runtime 是运行在本地的 Codex。',
     },
   ],
   en: [
@@ -68,7 +68,7 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: 'What tech stack does the first version support?',
       answer:
-        'The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Supabase DB and auth, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, GitHub Actions for CI, and local Codex as the Agent Runtime.',
+        'The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, and GitHub Actions for CI. Database and auth use Supabase through a guided manual setup. The Agent Runtime is a local Codex.',
     },
   ],
 };

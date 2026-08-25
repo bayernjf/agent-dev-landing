@@ -36,9 +36,11 @@ Requirement -> Clarification -> Spec & acceptance criteria -> Codex implements
 -> Manual acceptance -> Delivery report
 ```
 
-## Core Promise
+## Core Goal
 
-Users complete no more than 5 necessary manual operations and get a Web product baseline they own, with database, auth, CI, joint Preview, env-var contract, and delivery spec, in 60 minutes.
+Users get a Web product baseline they own, with database, auth, CI, joint Preview, env-var contract, and delivery spec, with manual steps left only where a real product decision is needed.
+
+"No more than 5 necessary manual operations" is a v0.1 design target, not a measured result.
 
 ## Automation vs. Asking
 

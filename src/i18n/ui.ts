@@ -47,7 +47,7 @@ export const ui = {
     'faq.subtitle': '关于所有权、安全与自动化的关键问题',
 
     'cta.title': '开始你的第一个产品交付',
-    'cta.subtitle': '60 分钟内获得一个归你所有的 Web 产品基线',
+    'cta.subtitle': '获得一个归你所有、可继续开发和维护的产品基线',
     'cta.button': '了解 Golden Path',
 
     'footer.tagline': 'Agentic Product Delivery Platform',
@@ -92,7 +92,7 @@ export const ui = {
     'faq.subtitle': 'Key questions about ownership, security, and automation',
 
     'cta.title': 'Start your first product delivery',
-    'cta.subtitle': 'Get a Web product baseline you own in 60 minutes',
+    'cta.subtitle': 'Get a product baseline you own and can keep developing',
     'cta.button': 'Learn the Golden Path',
 
     'footer.tagline': 'Agentic Product Delivery Platform',

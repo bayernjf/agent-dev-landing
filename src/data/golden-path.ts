@@ -44,8 +44,8 @@ export function buildHowToSchema(lang: 'zh' | 'en', siteUrl: string) {
     name: lang === 'zh' ? 'Agent-Dev Golden Path：从需求到交付' : 'Agent-Dev Golden Path: from requirement to delivery',
     description:
       lang === 'zh'
-        ? '从需求到交付报告的完整链路，用户完成不超过 5 个必要人工操作。'
-        : 'The complete pipeline from requirement to delivery report, with no more than 5 necessary manual operations.',
+        ? '从需求到交付报告的完整链路，每一步都以真实证据判定是否完成。'
+        : 'The complete pipeline from requirement to delivery report, with every step judged complete by real evidence.',
     inLanguage: lang === 'zh' ? 'zh-CN' : 'en-US',
     step: steps.map((s, i) => ({
       '@type': 'HowToStep',

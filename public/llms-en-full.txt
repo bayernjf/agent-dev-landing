@@ -26,7 +26,7 @@ Agent-Dev is responsible for:
 - Providing verified product Blueprints and default standards
 - Turning requirements into specs, acceptance criteria, and implementation tasks
 - Calling replaceable Agent Runtimes to implement, test, and fix code
-- Orchestrating GitHub, Supabase, Cloudflare, Vercel, and more
+- Orchestrating GitHub, Cloudflare, and Vercel; Supabase is a guided manual setup
 - Enforcing deterministic Policy to constrain Agent permissions
 - Aggregating real CI, deploy, test, and manual-acceptance evidence
 - Detecting drift, expired config, and maintenance tasks
@@ -70,7 +70,7 @@ Agent-Dev is responsible for:
 | --- | --- |
 | Frontend | React + Vite + TypeScript |
 | API | Hono |
-| Database & Auth | Supabase |
+| Database & Auth | Supabase (guided manual setup) |
 | Frontend hosting | Cloudflare Pages |
 | API hosting | Vercel Functions |
 | Code & CI | GitHub + GitHub Actions |
@@ -93,9 +93,9 @@ Cloudflare and Vercel are not alternatives. The first version fixes Cloudflare P
 10. Manual acceptance: Preview Gate passed
 11. Delivery report: Evidence chain and residual risks
 
-## Core Promise
+## Core Goal
 
-Users complete no more than 5 necessary manual operations and get a Web product baseline they own — with database, auth, CI, joint Preview, env-var contract, and delivery spec — in 60 minutes.
+Users get a Web product baseline they own, with database, auth, CI, joint Preview, env-var contract, and delivery spec, with manual steps left only where a real product decision is needed. "No more than 5 necessary manual operations" is a v0.1 design target, not a measured result.
 
 ## Automation vs. Asking
 
@@ -126,7 +126,7 @@ Must ask:
 | Portable providers | Yes, controlled migration | No | No | N/A |
 | Production permission | Policy + manual gate | Platform-managed | Platform-managed | Manual gate |
 | Delivery evidence | External fact chain | Platform logs | Preview | Task status |
-| Long-term maintenance | Drift detection + fix policy | Limited | Limited | N/A |
+| Long-term maintenance | Evidence retained (drift detection planned) | Limited | Limited | N/A |
 
 Agent-Dev should not be compared with these products on "who generates pages faster." The difference is: neutral, portable, user-owned, cross-Agent, cross-Provider, and accountable for full delivery in an auditable way.
 
@@ -148,7 +148,7 @@ Q: How is Agent-Dev different from Replit Agent or Lovable?
 A: Replit Agent and Lovable focus on conversational generation and one-click hosting on platform-owned resources. Agent-Dev's minimum unit is the product lifecycle: it uses user-owned GitHub/cloud resources, with replaceable Agents and providers, and is accountable for full delivery and long-term maintenance.
 
 Q: What tech stack does the first version support?
-A: The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Supabase DB and auth, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, GitHub Actions for CI, and local Codex as the Agent Runtime.
+A: The first version fixes a Web SaaS Golden Path: React + Vite + TypeScript frontend, Hono API, Cloudflare Pages for frontend hosting, Vercel Functions for API hosting, and GitHub Actions for CI. Supabase provides DB and auth through a guided manual setup. The Agent Runtime is a local Codex on the user's machine.
 
 ## Non-goals
 

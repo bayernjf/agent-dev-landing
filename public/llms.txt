@@ -23,7 +23,7 @@ Agent-Dev 属于 Agentic Product Delivery Platform。用户负责产品目标、
 
 - 前端：React + Vite + TypeScript
 - API：Hono
-- 数据库与认证：Supabase
+- 数据库与认证：Supabase（引导式手动接入）
 - 页面托管：Cloudflare Pages
 - API 托管：Vercel Functions
 - 代码与 CI：GitHub + GitHub Actions

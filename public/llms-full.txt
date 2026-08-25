@@ -26,7 +26,7 @@ Agent-Dev 负责：
 - 提供经过验证的产品 Blueprint 和默认规范
 - 把需求转成规格、验收标准和实施任务
 - 调用可替换的 Agent Runtime 实现、测试和修复代码
-- 编排 GitHub、Supabase、Cloudflare、Vercel 等平台
+- 编排 GitHub、Cloudflare、Vercel 等平台，Supabase 走引导式手动接入
 - 执行确定性 Policy，限制 Agent 权限
 - 聚合真实 CI、部署、测试和人工验收证据
 - 识别漂移、过期配置和维护任务
@@ -70,7 +70,7 @@ Agent-Dev 负责：
 | --- | --- |
 | 前端 | React + Vite + TypeScript |
 | API | Hono |
-| 数据库、认证 | Supabase |
+| 数据库、认证 | Supabase（引导式手动接入） |
 | 页面托管 | Cloudflare Pages |
 | API 托管 | Vercel Functions |
 | 代码与 CI | GitHub + GitHub Actions |
@@ -93,9 +93,9 @@ Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Page
 10. 人工验收：Preview Gate 通过
 11. 交付报告：证据链与残余风险
 
-## 核心承诺
+## 核心目标
 
-用户完成不超过 5 个必要人工操作，在 60 分钟内获得一个归自己所有、具备数据库、认证、CI、联合 Preview、环境变量契约和交付规范的 Web 产品基线。
+让用户获得一个归自己所有、具备数据库、认证、CI、联合 Preview、环境变量契约和交付规范的 Web 产品基线，人工操作只留在真正需要产品决策的地方。「不超过 5 个必要人工操作」是 v0.1 的设计指标，不是已经测得的结果。
 
 ## 自动与询问边界
 
@@ -126,7 +126,7 @@ Cloudflare 和 Vercel 不是候选关系。首版规范固定为 Cloudflare Page
 | Provider 可迁移 | 是，受控迁移 | 否 | 否 | 不涉及 |
 | 生产权限 | Policy + 人工 Gate | 平台托管 | 平台托管 | 人工 Gate |
 | 交付证据 | 外部事实链 | 平台日志 | Preview | 任务状态 |
-| 长期维护 | 漂移检测 + 修复策略 | 有限 | 有限 | 不涉及 |
+| 长期维护 | 证据留存（漂移检测规划中） | 有限 | 有限 | 不涉及 |
 
 Agent-Dev 不应与这些产品比较"谁生成页面更快"。差异是：中立、可迁移、用户拥有、跨 Agent、跨 Provider、可审计地对完整交付负责。
 
@@ -148,7 +148,7 @@ Q: Agent-Dev 与 Replit Agent / Lovable 有什么区别？
 A: Replit Agent 和 Lovable 侧重对话式生成与一键上线，资源由平台托管。Agent-Dev 管理的最小单位是产品生命周期，使用用户自有的 GitHub/云资源，Agent 和 Provider 可替换，并对完整交付和长期维护负责。
 
 Q: 首版支持哪些技术栈？
-A: 首版固定 Web SaaS Golden Path：React + Vite + TypeScript 前端、Hono API、Supabase 数据库与认证、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI、本地 Codex 作为 Agent Runtime。
+A: 首版的 Web SaaS Golden Path 固定为：React + Vite + TypeScript 前端、Hono API、Cloudflare Pages 托管前端、Vercel Functions 托管 API、GitHub Actions 做 CI；数据库与认证使用 Supabase，走引导式手动接入。Agent Runtime 是运行在本地的 Codex。
 
 ## 非目标
 
