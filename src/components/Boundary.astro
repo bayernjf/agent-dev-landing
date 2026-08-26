@@ -27,23 +27,27 @@ const userResponsible = isZh
 
 const agentResponsible = isZh
   ? [
-      '提供经过验证的产品 Blueprint 和默认规范',
-      '把需求转成规格、验收标准和实施任务',
-      '调用可替换的 Agent Runtime 实现、测试和修复代码',
-      '编排 GitHub、Cloudflare、Vercel 等平台，Supabase 走引导式手动接入',
-      '执行确定性 Policy，限制 Agent 权限',
-      '聚合真实 CI、部署、测试和人工验收证据',
-      '识别漂移、过期配置和维护任务',
+      '提供六类经过验证的产品 Blueprint 和默认规范',
+      '把需求转成结构化 Blueprint、验收标准和 Feature Task',
+      '调用可替换的 Agent Runtime（Codex/OpenCode/Claude 等）实现、测试和修复代码',
+      '编排 GitHub、Vercel、Cloudflare 真实 Provider，Supabase 走引导式手动接入',
+      '管理凭证与环境变量，Secret 不返回 API、不写入数据库',
+      '执行确定性 Policy，限制 Agent 权限与生产访问',
+      '编排 Dual Preview 部署与联合冒烟测试',
+      '聚合真实 CI、部署、测试和人工验收证据，记录观测值',
+      '校验 workspace 产物漂移，识别过期配置和维护任务',
       '给出明确的交付状态和残余风险',
     ]
   : [
-      'Provide verified product Blueprints and default standards',
-      'Turn requirements into specs, acceptance criteria, and tasks',
-      'Call replaceable Agent Runtimes to implement, test, and fix code',
-      'Orchestrate GitHub, Cloudflare, and Vercel; Supabase is a guided manual setup',
-      'Enforce deterministic Policy to constrain Agent permissions',
-      'Aggregate real CI, deploy, test, and manual-acceptance evidence',
-      'Detect drift, expired config, and maintenance tasks',
+      'Provide six verified product Blueprints and default standards',
+      'Turn requirements into structured Blueprints, acceptance criteria, and Feature Tasks',
+      'Call replaceable Agent Runtimes (Codex/OpenCode/Claude, etc.) to implement, test, and fix code',
+      'Orchestrate real GitHub, Vercel, and Cloudflare providers; Supabase is a guided manual setup',
+      'Manage credentials and env vars; secrets are never returned via API or written to DB',
+      'Enforce deterministic Policy to constrain Agent permissions and production access',
+      'Orchestrate Dual Preview deployment and joint smoke tests',
+      'Aggregate real CI, deploy, test, and manual-acceptance evidence, recording observations',
+      'Validate workspace artifact drift, detect stale config and maintenance tasks',
       'Report clear delivery status and residual risks',
     ];
 ---

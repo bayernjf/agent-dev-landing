@@ -12,37 +12,37 @@ const features =
     ? [
         {
           title: '用户拥有',
-          desc: '代码、仓库、数据、域名、云资源和 Blueprint 归用户所有。退出 Agent-Dev 后，产品仍可独立构建、部署和维护。',
+          desc: '代码、仓库、数据、域名、云资源和 Blueprint 归用户所有。三个真实项目已验证：退出 Agent-Dev 后产品仍可独立构建、部署和维护。',
         },
         {
-          title: '中立可迁移',
-          desc: '模型和供应商均可替换。不绑定特定 Agent Runtime 或云平台，更换数据库或部署供应商是受控迁移而非设置修改。',
+          title: '六类产品模板',
+          desc: 'Web SaaS、落地页、浏览器插件（MV3）、桌面端（Tauri/Electron）、移动端（Expo）和 MCP Server，每类生成物都通过本地与真实 GitHub Actions 质量门禁。',
         },
         {
           title: '真实 Gate',
-          desc: '大模型可以提出方案，但不能通过 Prompt 获得生产权限。确定性 Policy、GitHub Rulesets、Environment Approval 是最终约束。',
+          desc: '大模型可以提出方案，但不能通过 Prompt 获得生产权限。生产发布为两道人工闸门（请求 + 具名批准），从生产分支 checkout 后发布。',
         },
         {
           title: '证据链交付',
-          desc: '交付状态以 GitHub Checks、Deployment Records、Preview URL、数据库状态、冒烟测试和人工验收为准，而非 Agent 的自然语言总结。',
+          desc: '交付状态以 GitHub Checks、Deployment Records、Preview URL、冒烟测试和真实观测值为准，而非 Agent 的自然语言总结。未执行的验证不得标记通过。',
         },
       ]
     : [
         {
           title: 'User-owned',
-          desc: 'Code, repos, data, domains, cloud resources, and Blueprint belong to the user. After leaving Agent-Dev, the product still builds, deploys, and maintains independently.',
+          desc: 'Code, repos, data, domains, cloud resources, and Blueprint belong to the user. Three real projects have verified that products remain independently buildable, deployable, and maintainable after leaving Agent-Dev.',
         },
         {
-          title: 'Neutral and portable',
-          desc: 'Models and providers are replaceable. No lock-in to a specific Agent Runtime or cloud platform. Switching databases or deploy providers is a controlled migration, not a setting change.',
+          title: 'Six product templates',
+          desc: 'Web SaaS, landing pages, browser extensions (MV3), desktop (Tauri/Electron), mobile (Expo), and MCP Server. Each artifact passes both local and real GitHub Actions quality gates.',
         },
         {
           title: 'Real gates',
-          desc: 'An LLM may propose, but cannot obtain production permission via prompt. Deterministic Policy, GitHub Rulesets, and Environment Approval are the final constraints.',
+          desc: 'An LLM may propose, but cannot obtain production permission via prompt. Production release requires two human gates (request + named approval), published from a production branch checkout.',
         },
         {
           title: 'Evidence-based delivery',
-          desc: 'Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, database state, smoke tests, and manual acceptance, not the Agent\'s natural-language summary.',
+          desc: 'Delivery status is grounded in GitHub Checks, Deployment Records, Preview URLs, smoke tests, and real observations, not the Agent\'s natural-language summary. Unexecuted verifications cannot be marked as passed.',
         },
       ];
 ---
