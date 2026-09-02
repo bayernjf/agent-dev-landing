@@ -46,12 +46,12 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: '有真实交付案例吗？',
       answer:
-        '三个真实项目已通过完整云端链路交付上线：Receipt Test（收据管理页面）、Workspace Verify Fresh（API 版本端点）、Link Vault（链接保存 API + 页面）。每个项目都走完 Blueprint → Preview → Production 全周期，PR 经 GitHub Actions 质量门禁后合并，生产 API 与页面均对外可访问，并在平台报告之外独立复验。三轮真实验证共修掉 29 个真实缺陷。',
+        '四个真实项目已通过完整云端链路交付上线：Receipt Test（收据管理页面）、Workspace Verify Fresh（API 版本端点）、Link Vault（链接保存 API + 页面）、MCP Word Tools（MCP 服务器，首个非 web-saas 类型交付）。每个项目都走完 Blueprint → Preview → Production 全周期，PR 经 GitHub Actions 质量门禁后合并，生产 API 与页面均对外可访问，并在平台报告之外独立复验。四轮真实验证共修掉 29 个真实缺陷。',
     },
     {
       question: 'Agent-Dev 现在可以怎么运行？',
       answer:
-        'v0.1 是 local-first 的本地应用，不是托管 SaaS：控制面跑在你自己的电脑上，直接复用你已登录的 GitHub、Vercel、Cloudflare CLI 和本机 coding agent。当前仍处于 v0.1 实验阶段，核心交付链路已在真实云端验证通过，但尚未作为可用于生产的稳定版本发布。',
+        'v0.2 是 local-first 的本地应用，不是托管 SaaS：控制面跑在你自己的电脑上，直接复用你已登录的 GitHub、Vercel、Cloudflare CLI 和本机 coding agent。当前仍处于 v0.2 实验阶段，核心交付链路已在真实云端验证通过，但尚未作为可用于生产的稳定版本发布。',
     },
   ],
   en: [
@@ -93,12 +93,12 @@ export const faqData: Record<'zh' | 'en', FaqItem[]> = {
     {
       question: 'Are there real delivery examples?',
       answer:
-        'Three real projects have been delivered end-to-end on real cloud infrastructure: Receipt Test (receipt management page), Workspace Verify Fresh (API version endpoint), and Link Vault (link-saving API + page). Each project completed the full Blueprint → Preview → Production cycle, with PRs merged after GitHub Actions quality gates, and production APIs and pages publicly accessible and independently verified outside the platform report. The three validation rounds fixed 29 real defects.',
+        'Four real projects have been delivered end-to-end on real cloud infrastructure: Receipt Test (receipt management page), Workspace Verify Fresh (API version endpoint), Link Vault (link-saving API + page), and MCP Word Tools (MCP server, first non-web-saas delivery). Each project completed the full Blueprint → Preview → Production cycle, with PRs merged after GitHub Actions quality gates, and production APIs and pages publicly accessible and independently verified outside the platform report. The four validation rounds fixed 29 real defects.',
     },
     {
       question: 'How does Agent-Dev run today?',
       answer:
-        'v0.1 is a local-first application, not a hosted SaaS: the control plane runs on your own machine and reuses your existing GitHub, Vercel, and Cloudflare CLI logins plus a local coding agent. It is still a v0.1 experiment; the core delivery pipeline has been verified on real cloud infrastructure, but it is not yet released as a production-ready stable version.',
+        'v0.2 is a local-first application, not a hosted SaaS: the control plane runs on your own machine and reuses your existing GitHub, Vercel, and Cloudflare CLI logins plus a local coding agent. It is still a v0.2 experiment; the core delivery pipeline has been verified on real cloud infrastructure, but it is not yet released as a production-ready stable version.',
     },
   ],
 };
