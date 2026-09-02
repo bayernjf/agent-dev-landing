@@ -22,7 +22,7 @@ export const ui = {
 
     'hero.badge': 'Agentic Product Delivery Platform',
     'hero.title': '把 AI 生成的代码变成已上线的产品',
-    'hero.subtitle': 'Agent-Dev 管理从需求到生产的完整生命周期。三个真实项目已通过真实云端全链路交付上线，代码、云资源和域名全部归你所有。',
+    'hero.subtitle': 'Agent-Dev 管理从需求到生产的完整生命周期。四个真实项目已通过真实云端全链路交付上线，代码、云资源和域名全部归你所有。',
     'hero.cta.github': 'GitHub',
     'hero.cta.primary': '查看 Golden Path',
     'hero.cta.secondary': '阅读文档',
@@ -66,7 +66,7 @@ export const ui = {
 
     'hero.badge': 'Agentic Product Delivery Platform',
     'hero.title': 'Turn AI-generated code into shipped products',
-    'hero.subtitle': 'Agent-Dev manages the full lifecycle from requirement to production. Three real projects have been delivered end-to-end on real cloud infrastructure, with code, cloud resources, and domains fully owned by you.',
+    'hero.subtitle': 'Agent-Dev manages the full lifecycle from requirement to production. Four real projects have been delivered end-to-end on real cloud infrastructure, with code, cloud resources, and domains fully owned by you.',
     'hero.cta.github': 'GitHub',
     'hero.cta.primary': 'View Golden Path',
     'hero.cta.secondary': 'Read the Docs',
